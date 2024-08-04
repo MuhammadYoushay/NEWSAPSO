@@ -227,7 +227,8 @@ function App() {
         event.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:5000/optimize', {
+            const API_URL = process.env.REACT_APP_API_URL || 'https://newsapso.onrender.com';
+            const response = await axios.post(`${API_URL}/optimize`, {
                 tickers: selectedTickers,
                 startDate,
                 endDate,

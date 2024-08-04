@@ -1,0 +1,275 @@
+.App {
+  text-align: center;
+}
+
+.app{
+  background-color: rgb(104, 102, 102);
+  padding: 50px;
+  background-image: url("new.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.app-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 2px 20px rgba(5, 30, 173, 0.5);
+}
+
+
+.app-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+.ticker-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* overflow-x: auto; */
+}
+
+.ticker-item:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 20px rgba(5, 30, 173, 0.5); 
+  border-radius: 20%;
+}
+
+.ticker-logo {
+  border-radius: 30%;
+  width: 100px;
+  height: 100px;
+}
+
+.selected-tickers-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.selected-tickers-list .badge {
+  font-size: 0.8rem;
+}
+
+.results-section {
+  margin-top: 30px;
+  border-top: 1px solid #dee2e6;
+  padding-top: 30px;
+}
+
+
+.row-1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: auto;
+  overflow-x: scroll;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 2px 1px rgba(5, 30, 173, 0.5);
+  height: 100%;
+
+  /* Styling the scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+/* For Webkit browsers like Chrome and Safari */
+.row-1::-webkit-scrollbar {
+  width: 3px;
+}
+
+.row-1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.row-1::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(5, 30, 173, 0.5);
+  height: 280px; /* Set a fixed height */
+  margin: 20px;
+  overflow-y: auto;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 8px rgba(5, 30, 173, 0.5);
+  transform: translateY(-10px);
+}
+
+.card-header {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.radio-button {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  /* appearance: none; */
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  transition: 0.5s;
+  position: relative;
+}
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn{
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 8px rgba(5, 30, 173, 0.5);
+  background-color: black;
+  color: white;
+}
+
+.bg-secondaryn {
+  --bs-bg-opacity: 1;
+  background-color: black;
+}
+
+.btn-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-label {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: gray;
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+}
+
+.form-label-left {
+  display: flex;
+  margin: 10px;
+  margin-left: 2px;
+  color: gray;
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+}

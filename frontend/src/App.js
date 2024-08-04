@@ -11,7 +11,7 @@ function App() {
     const [tickers, setTickers] = useState(['MSFT', 'AAPL', 'NVDA', 'AMZN', 'META', 'GOOGL', 'LLY', 'AVGO', 'JPM', 'NFLX'])
     const [selectedTickers, setSelectedTickers] = useState([]);
     const [inputTicker, setInputTicker] = useState('');
-    const [startDate, setStartDate] = useState('2022-01-01');
+    const [startDate, setStartDate] = useState('2023-01-01');
     const [endDate, setEndDate] = useState('2024-01-01');
     const [riskFreeRate, setRiskFreeRate] = useState(0.02);
     const [result, setResult] = useState(null);
